@@ -16,12 +16,13 @@ var app = new Vue({
   methods: {
     async getDogImage() {
       const response = await fetch(
-        `https://dog.ceo/api/breeds/list/all`,
-
+        // `https://dog.ceo/api/breeds/list/all`,
+        // `https://dog.ceo/api/breed/shiba/images/random`,
+        `https://dog.ceo/api/breed/akita/images/random`,
         options
       ).then((response) => response.json());
       console.log(response);
-      //   this.dogImage = response.message;
+      this.dogImage = response.message;
     },
   },
 });
